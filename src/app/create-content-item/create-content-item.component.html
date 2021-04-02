@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 login-field align-items-center">
+      <div class="row">
+        <h3 class="tab-header-custom">
+          Add New Post
+        </h3>
+      </div>
+      <form>
+        <div class="row justify-content-center">
+          <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input matInput placeholder="Enter Title here" [formControl]="title">
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-center">
+          <mat-form-field>
+            <textarea matInput rows="5" placeholder="Content Text" [formControl]="text"></textarea>
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-between align-items-center">
+          <app-file-upload (onFileUploaded)="fileUploaded($event)"  (onFileReading)="SubmitButton.disabled = $event" text="Upload Image"></app-file-upload>
+          <mat-form-field class="not-100">
+            <input matInput rows="5" placeholder="Alternative: Image URL"  [formControl]="imgLink">
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-end" style="padding-top: 20px;">
+          <button mat-button color="primary" (click)="createNewPost()" #SubmitButton>
+            Create Post
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

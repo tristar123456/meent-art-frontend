@@ -1,0 +1,44 @@
+.card{
+  //box-shadow: none;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 4px 0 #171a1d;
+  @media (max-width: 576px){
+    border-radius: 0;
+  }
+}
+
+
+.card-header{
+  background-color: #ffffff;
+  border: none;
+  padding-bottom: 0;
+
+  .card-title{
+    margin-bottom: 5px;
+    font-family: Courier;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .card-subtitle{
+    margin-bottom: 5px;
+    color: #0c5460;
+    font-size: 12px;
+  }
+}
+.card-body{
+  .card-text{
+    font-family: 'Segoe UI', Lato, Arial, 'Noto Sans';
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+  .card-link{
+    cursor: pointer;
+  }
+}
+
+.card-img{
+  width: 100%;
+  border-radius: 0;
+}

@@ -1,0 +1,37 @@
+<div class="header-bar fixed-top">
+  <div class="container">
+    <div class="row flex-nowrap">
+      <div class="col justify-content-center">
+        <div class="row align-items-center flex-nowrap">
+          <a class="logo" [routerLink]="['']">
+            <img src="assets/images/logo_M.png" alt="M">
+          </a>
+          <form class="d-lg-block d-xl-block d-md-block d-sm-block">
+            <mat-form-field>
+              <mat-label>Search</mat-label>
+              <input matInput placeholder="Type something..." #startWith (keyup)="applyFilter(startWith.value)">
+              <mat-icon matSuffix style="cursor: pointer;" [hidden]="startWith.value === ''"
+                        (click)="startWith.form.reset(); applyFilter('');">backspace icon
+              </mat-icon>
+            </mat-form-field>
+          </form>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row align-items-center justify-content-end flex-nowrap">
+          <a mat-button color="primary" [routerLink]="['new']" [class.d-none]="!checkLogin()">
+            <mat-icon>
+              playlist_add
+            </mat-icon>
+          </a>
+          <button mat-button color="primary" (click)="performLogout()">
+            <mat-icon [class.d-none]="!checkLogin()">
+              lock
+            </mat-icon>
+          </button>
+          <a mat-button color="primary" [routerLink]="['login']" [hidden]="checkLogin()">Log In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

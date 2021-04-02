@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-xl-8 col-lg-8 col-md-10 col-sm-12 login-field align-items-center ">
+      <form method="post" (ngSubmit)="performLogin()">
+        <div class="row justify-content-center">
+          <mat-form-field>
+            <input matInput placeholder="Username" [formControl]="username" #UserName>
+            <mat-icon matSuffix style="cursor: pointer;" [hidden]="UserName.value === ''" (click)="UserName.value = ''">
+              backspace icon
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-center">
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" [formControl]="password" #Password>
+            <mat-icon matSuffix style="cursor: pointer;" [hidden]="Password.value === ''" (click)="Password.value = ''">
+              backspace icon
+            </mat-icon>
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-center">
+          <button mat-button color="primary" type="submit">
+            <mat-icon>lock_opened</mat-icon>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.content-item{
+  padding: 6px;
+}
+
+@media (max-width: 576px){
+  .content-item{
+    padding: 0;
+    padding-bottom: 4px;
+  }
+}

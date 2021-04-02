@@ -1,0 +1,36 @@
+.header-bar{
+  box-shadow: 0 -1px 1px 0 #113dd0 inset;
+
+  background-color: white;
+
+  .container{
+    max-width: 95%;
+  }
+}
+@media (min-width: 576px) {
+  .container{
+    max-width: 90%;
+  }
+}
+@media (max-width: 576px){
+  mat-form-field{
+    width: auto;
+  }
+  .header-bar{
+    box-shadow: 0 1px 2px 0 rgba(10, 10, 10, 0.18);
+  }
+}
+
+.logo{
+  height: inherit;
+  width: auto;
+  padding: 10px 20px 10px 10px;
+  img{
+    height: 45px;
+    width: auto;
+  }
+}
+
+.row{
+  height: 100%;
+}

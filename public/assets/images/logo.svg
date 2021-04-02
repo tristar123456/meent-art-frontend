@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2705">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop2701" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0;"
+         offset="1"
+         id="stop2703" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2697">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop2693" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0;"
+         offset="1"
+         id="stop2695" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2533">
+      <stop
+         style="stop-color:#0000a6;stop-opacity:1;"
+         offset="0"
+         id="stop2529" />
+      <stop
+         style="stop-color:#0000a6;stop-opacity:0;"
+         offset="1"
+         id="stop2531" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1097">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1;"
+         offset="0"
+         id="stop1093" />
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:0;"
+         offset="1"
+         id="stop1095" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1074">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop1070" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0;"
+         offset="1"
+         id="stop1072" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1050">
+      <stop
+         style="stop-color:#00ffff;stop-opacity:1;"
+         offset="0"
+         id="stop1046" />
+      <stop
+         style="stop-color:#00ffff;stop-opacity:0;"
+         offset="1"
+         id="stop1048" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1074"
+       id="linearGradient1076"
+       x1="67.738014"
+       y1="72.446609"
+       x2="164.94324"
+       y2="72.415581"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.90858841,0,0,0.90858841,7.4463317,13.99111)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1097"
+       id="linearGradient1099"
+       x1="112.57641"
+       y1="72.949813"
+       x2="136.74938"
+       y2="72.949813"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.90858841,0,0,0.90858841,7.4463317,13.99111)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2533"
+       id="linearGradient2535"
+       x1="113.29507"
+       y1="96.450844"
+       x2="-52.916668"
+       y2="232.83333"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1050"
+       id="linearGradient2557"
+       x1="85.575027"
+       y1="126.58915"
+       x2="131.71379"
+       y2="126.58915"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2697"
+       id="linearGradient2699"
+       x1="142.875"
+       y1="84.666664"
+       x2="79.375"
+       y2="195.79167"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2705"
+       id="linearGradient2707"
+       x1="105.83334"
+       y1="89.958336"
+       x2="58.208332"
+       y2="127"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2705"
+       id="linearGradient2733"
+       x1="52.916668"
+       y1="174.625"
+       x2="174.625"
+       y2="52.916668"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="491.89588"
+     inkscape:cy="416.01211"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer5"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:window-width="1853"
+     inkscape:window-height="1145"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:lockguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2685" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="bg">
+    <circle
+       style="opacity:1;fill:#10009f;stroke:#000000;stroke-width:0.19293;stroke-opacity:0;fill-opacity:1"
+       id="path1083"
+       cx="103.80997"
+       cy="112.73389"
+       r="72.918701"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Logo"
+     style="display:inline;opacity:0.99299998">
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path967"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path969"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path971"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path973"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path975"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="mix-blend-mode:normal;fill:none;stroke:#050000;stroke-width:0.171713;stroke-linejoin:bevel;stroke-opacity:0"
+       d="m 120.29812,142.51346 -10.45935,-5.09658 0.11371,-15.43959 c 0.0625,-8.49179 0.1137,-19.32899 0.1137,-24.082667 v -8.643074 h 10.58081 10.58081 l -0.12965,21.077701 c -0.0713,11.59273 -0.17712,24.72339 -0.23514,29.17925 l -0.10544,8.10154 z"
+       id="path977"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="fill:url(#linearGradient2733);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 70.114583,154.78125 18.520834,0 V 96.572917 l 15.875003,18.520833 15.875,-18.520833 0,58.208333 h 18.52083 V 70.114583 l -18.52083,0 -15.875,18.520834 -15.875003,-18.520834 -18.520834,0 z"
+       id="path2683"
+       sodipodi:nodetypes="ccccccccccccc"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="fill:url(#linearGradient2707);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 88.635416,96.572915 70.114583,75.40625 l -10e-7,-3.143491 v -1.621946 -0.526231 h 0.537192 1.536524 16.447118 l 27.252084,31.749998 -11.37708,13.22917 z"
+       id="path2689"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+    <path
+       style="fill:url(#linearGradient2699);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 120.38542,70.114582 v 84.666668 l 17.99166,-0.26458 0.52917,-84.402088 z"
+       id="path2691"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="15.654283"
+       inkscape:export-ydpi="15.654283"
+       inkscape:export-filename="/home/tristan.wolf@GDAAG.DE/Seafile/My Library/Own Projects/unartig/frontend/src/favicon.ico.png" />
+  </g>
+</svg>

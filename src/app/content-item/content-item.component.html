@@ -1,0 +1,22 @@
+<div class="card" [id]="item.id">
+  <div class="card-header">
+    <h5 class="card-title" *ngIf="!!item.title">
+      {{item.title}}
+    </h5>
+    <p class="card-subtitle" *ngIf="!!item.date">{{item.date | date}}</p>
+  </div>
+  <img src="{{item.imgLink}}" class="card-img" alt='Picture' *ngIf="!!item.imgLink">
+  <div class="card-body">
+    <p class="card-text" *ngIf="!!item.text">{{item.text}}</p>
+    <div class="container" *ngIf="loggedIn()">
+      <div class="row justify-content-end">
+        <a class="card-link" [routerLink]="['edit',item.id]">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a class="card-link" (click)="openDeleteDialog(item)">
+          <mat-icon>delete</mat-icon>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
