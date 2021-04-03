@@ -6,5 +6,5 @@ import {Component, Input, Output} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'unARTig';
+  title = 'Meent.art';
 }

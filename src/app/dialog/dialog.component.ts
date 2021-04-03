@@ -16,10 +16,8 @@ export class DialogComponent implements OnInit {
   onCloseConfirm() {
     setTimeout(() => {
       this.dialogRef.close((dialogResult)=>{
-        if (dialogResult){
-          return this.data.item
-        }
-        return null
+        return !!dialogResult;
+
       });
     }, 0);
   }
