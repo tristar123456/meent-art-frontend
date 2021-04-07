@@ -1,12 +1,4 @@
-import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewInit,
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit
-} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, HostListener} from '@angular/core';
 import {SCREEN_SIZE} from "./screen-size.enum";
 import {ResizeService} from "./resize.service";
 
@@ -54,9 +46,7 @@ export class SizeDetectorComponent implements AfterViewInit {
       const el = this.elementRef.nativeElement.querySelector(`.${this.prefix}${x.id}`);
 
       // check its display property value
-      const isVisible = window.getComputedStyle(el).display != 'none';
-
-      return isVisible;
+      return window.getComputedStyle(el).display != 'none';
     });
 
     this.resizeSvc.onResize(currentSize.id);

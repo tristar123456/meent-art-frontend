@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "meent-art-pinboard"
+  },
+  "targets": {
+    "meent-art-pinboard": {
+      "hosting": {
+        "unARTig": [
+          "meent-art"
+        ]
+      }
+    }
+  }
+}

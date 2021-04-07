@@ -27,7 +27,6 @@ export class CreateContentItemComponent implements OnInit {
   }
 
   fileUploaded(fileAsString: string) {
-    console.log(fileAsString);
     this.fileAsString = fileAsString;
   }
 
@@ -39,7 +38,7 @@ export class CreateContentItemComponent implements OnInit {
     if (this.fileAsString === null){
       item.imgLink = this.imgLink.value;
     }else{
-      item.image = this.fileAsString;
+      item.imgLink = this.fileAsString;
     }
     this.backendService.addPost(item).then(()=>{
       this.router.navigate(['']);

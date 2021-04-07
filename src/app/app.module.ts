@@ -24,6 +24,8 @@ import {EditItemComponent} from './edit-item/edit-item.component';
 import {AuthInterceptor} from "./providers/auth-interceptor.service";
 import {SizeDetectorComponent} from './size-detector/size-detector.component';
 import {NgxImageCompressService} from "ngx-image-compress";
+import {AngularFireModule} from "@angular/fire";
+import {AngularFireStorageModule} from "@angular/fire/storage";
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -46,6 +48,16 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCXzaNI6VVvVMUmQP_HBuulZbFz99qBx0Y",
+      authDomain: "meent-art-pinboard.firebaseapp.com",
+      databaseURL: "https://meent-art-pinboard-default-rtdb.firebaseio.com",
+      projectId: "meent-art-pinboard",
+      storageBucket: "meent-art-pinboard.appspot.com",
+      messagingSenderId: "57509747354",
+      appId: "1:57509747354:web:587de7d5c0adb124bb9d23"
+    }),
+    AngularFireStorageModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,

@@ -37,25 +37,34 @@ export class AuthInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    const accessToken: string = this.authService.getToken();
-    const csrftoken = this.getCookie('csrftoken');
+    const accessToken: string = this.authService.getToken() || '';
+    const csrftoken = this.getCookie('csrftoken') || '';
 
     // set global application headers.
     request = request.clone({
       setHeaders: {
         'Content-Type': 'application/json; charset=utf-8',
         'Accept': 'application/json',
-        'X-CSRFTOKEN': csrftoken
       }
     });
+    // Set headers for requests that require CSRF.
+    if (csrftoken != '') {
+      request = request.clone({
+        headers: request.headers.set(
+          'X-CSRFTOKEN',
+          csrftoken,
+        )
+      })
+    }
     // Set headers for requests that require authorization.
     if (accessToken != '') {
-      const authenticatedRequest = request.clone({
+      let authenticatedRequest = request.clone({
         headers: request.headers.set(
           'Authorization',
           'Bearer ' + accessToken,
         )
       });
+
       // Request with authorization headers
       return next.handle(authenticatedRequest);
     } else {

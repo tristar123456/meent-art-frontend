@@ -1,5 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgxImageCompressService} from "ngx-image-compress";
+import {AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask} from "@angular/fire/storage";
+import {Observable} from "rxjs";
+import {strict} from "assert";
 
 const ALLOWED_TYPE = 'image'
 
@@ -12,23 +15,42 @@ export class FileUploadComponent implements OnInit {
   @Input() text = "Select an Image";
   filename: string;
 
-  @Output() onFileUploaded = new EventEmitter<string | ArrayBuffer>();
+  // @Output() onFileUploaded = new EventEmitter<string | ArrayBuffer>();
+  @Output() onFileUploaded = new EventEmitter<string>();
   @Output() onFileReading = new EventEmitter<boolean>()
   fileName = '';
 
+  ref: AngularFireStorageReference;
+  task: AngularFireUploadTask;
+  downloadURL: Observable<string>;
+  private uploadProgress: Observable<number | undefined>;
+
   constructor(
-    private imageCompress: NgxImageCompressService
+    private imageCompress: NgxImageCompressService,
+    private afStorage: AngularFireStorage
   ) { }
 
   ngOnInit(): void {
   }
 
   onFileSelected(event) {
+    this.onFileReading.emit(true);
+    const id = Math.random().toString(36).substring(2);
+    this.ref = this.afStorage.ref(id);
     const file:File = event.target.files[0];
-    if (file.type.split("/")[0] === ALLOWED_TYPE) {
-      this.fileName = file.name;
-      this.getBase64(file);
-    }
+    this.task = this.ref.put(file);
+    this.uploadProgress = this.task.percentageChanges();
+    this.task.then((a)=>{
+      a.ref.getDownloadURL().then((link: string) =>{
+        this.onFileUploaded.emit(link);
+        this.onFileReading.emit(false);
+      });
+    });
+
+    // if (file.type.split("/")[0] === ALLOWED_TYPE) {
+    //   this.fileName = file.name;
+    //   this.getBase64(file);
+    // }
   }
 
   //TODO: DOES NOT WORK PROPERLY

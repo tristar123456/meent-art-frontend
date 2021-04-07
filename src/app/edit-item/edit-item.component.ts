@@ -39,7 +39,6 @@ export class EditItemComponent implements OnInit {
   }
 
   fileUploaded(fileAsString: string) {
-    console.log(fileAsString);
     this.fileAsString = fileAsString;
   }
 
@@ -51,7 +50,7 @@ export class EditItemComponent implements OnInit {
     if (this.fileAsString === null){
       item.imgLink = this.imgLink.value;
     }else{
-      item.image = this.fileAsString;
+      item.imgLink = this.fileAsString;
     }
     this.backendService.editPost(this.id, item).then(()=>{
         this.router.navigate(['']);
