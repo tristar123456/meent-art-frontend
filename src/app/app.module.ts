@@ -26,6 +26,8 @@ import {SizeDetectorComponent} from './size-detector/size-detector.component';
 import {NgxImageCompressService} from "ngx-image-compress";
 import {AngularFireModule} from "@angular/fire";
 import {AngularFireStorageModule} from "@angular/fire/storage";
+import { ImageDialogComponent } from './image-dialog/image-dialog.component';
+import {ResizeService} from "./size-detector/resize.service";
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -36,6 +38,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
   declarations: [
     AppComponent,
     ContentItemComponent,
+    SizeDetectorComponent,
     PinboardComponent,
     HeaderComponent,
     LoginComponent,
@@ -44,7 +47,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
     FileUploadComponent,
     DialogComponent,
     EditItemComponent,
-    SizeDetectorComponent
+    ImageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -81,6 +84,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
       deps: [HostConfigProvider],
       multi: true
     },
+    ResizeService,
     HttpClient,
     NgxImageCompressService
   ],

@@ -8,3 +8,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --ci-color: #00e9f8;
   --ci-bg-color: #0b2374;
 }
+
+.image-dialog{
+  mat-dialog-container{
+    height: auto;
+    width: auto;
+    padding: 0;
+    app-image-dialog{
+      height: inherit;
+      width: inherit;
+      mat-dialog-content{
+        height: inherit;
+        width: inherit;
+        max-height: none;
+        padding: 0;
+        margin: 0;
+        img{
+          z-index: 0;
+          max-height: 90vh;
+          height: inherit;
+          width: inherit;
+
+        }
+
+      }
+    }
+  }
+}
+

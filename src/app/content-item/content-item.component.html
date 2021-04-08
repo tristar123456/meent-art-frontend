@@ -5,7 +5,7 @@
     </h5>
     <p class="card-subtitle" *ngIf="!!item.date">{{item.date | date}}</p>
   </div>
-  <img src="{{item.imgLink}}" class="card-img" alt='Picture' *ngIf="!!item.imgLink">
+  <img src="{{item.imgLink}}" (click)="openImageDialog(item.imgLink)" class="card-img" alt='Picture' *ngIf="!!item.imgLink">
   <div class="card-body">
     <p class="card-text" *ngIf="!!item.text">{{item.text}}</p>
     <div class="container" *ngIf="loggedIn()">

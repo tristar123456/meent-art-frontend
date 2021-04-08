@@ -5,6 +5,7 @@ import {DialogComponent} from "../dialog/dialog.component";
 import {BackendService} from "../providers/backend.service";
 import {AuthService} from "../providers/auth.service";
 import {error} from "@angular/compiler/src/util";
+import {ImageDialogComponent} from "../image-dialog/image-dialog.component";
 
 @Component({
   selector: 'app-content-item',
@@ -44,5 +45,13 @@ export class ContentItemComponent implements OnInit {
 
   loggedIn() {
     return this.authService.isLoggedIn();
+  }
+
+  openImageDialog(imgLink: string) {
+    let imageDialogRef = this.dialog.open(ImageDialogComponent, {
+      width: '100%',
+      panelClass: 'image-dialog',
+      data: {imgLink: imgLink}
+    });
   }
 }

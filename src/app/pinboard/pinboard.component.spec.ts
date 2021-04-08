@@ -7,6 +7,8 @@ import {AuthService} from "../providers/auth.service";
 import {FilterService} from "../providers/filter.service";
 import {ResizeService} from "../size-detector/resize.service";
 import {PinboardService} from "./pinboard.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {FilterItemPipe} from "./filter-item.pipe";
 
 describe('PinboardComponent', () => {
   let component: PinboardComponent;
@@ -14,8 +16,11 @@ describe('PinboardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PinboardComponent ],
-      providers: [AuthService, FilterService, ResizeService, PinboardService, HttpClient, HttpHandler]
+      declarations: [ PinboardComponent, FilterItemPipe],
+      providers: [AuthService, FilterService, ResizeService, PinboardService],
+      imports: [
+        HttpClientTestingModule
+      ]
     })
     .compileComponents();
   }));
