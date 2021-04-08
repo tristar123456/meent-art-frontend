@@ -1,6 +1,4 @@
-import {Injectable, Input} from '@angular/core';
-// import {HttpClient} from "@angular/common/http";
-// import {HostConfigProvider} from "../providers/host-config.rovider";
+import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {Item} from "../content-item/item";
 import {BackendService} from "../providers/backend.service";

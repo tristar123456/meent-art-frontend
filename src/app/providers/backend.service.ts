@@ -13,6 +13,8 @@ export class BackendService {
   observItemList = new Observable<Item[]>((itemList) => {
     this.httpClient.get<Item[]>(this.hostConfigProvider.getApiUrl() + '/item/list').subscribe((received: Item[]) => {
       itemList.next(received);
+    }, error => {
+      console.log(error);
     })
   });
 
@@ -71,6 +73,8 @@ export class BackendService {
     return new Observable<Item>((item) => {
       this.httpClient.get<Item>(this.hostConfigProvider.getApiUrl() + '/item/' + id).subscribe((received: Item) => {
         item.next(received);
+      }, error => {
+        console.log(error);
       })
     });
   }

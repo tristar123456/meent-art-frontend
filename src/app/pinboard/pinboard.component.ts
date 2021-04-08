@@ -53,6 +53,8 @@ export class PinboardComponent implements OnInit {
     this.pinboardService.getContentItems().subscribe((receivedItemList: Item[]) => {
       this.itemList = receivedItemList;
       this.colList = this.getColumns(this.itemList);
+    }, error => {
+      console.log(error);
     })
   }
 
@@ -60,6 +62,8 @@ export class PinboardComponent implements OnInit {
     let item = {} as Item;
     this.pinboardService.getContentItem(id).subscribe((receivedItem) => {
       item = receivedItem;
+    }, error => {
+      console.log(error);
     });
     return item;
   }
@@ -96,6 +100,7 @@ export class PinboardComponent implements OnInit {
 
   getColumns(itemList: Item[]): Array<Item[]> {
     let itemsInColumns = new Array<Item[]>();
+    itemList = itemList.reverse()
     for (let colNumber = 0; colNumber < this.numberOfColumns; colNumber++) {
       itemsInColumns.push(this.getColumn(itemList, colNumber));
     }

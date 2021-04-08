@@ -1,6 +1,12 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PinboardComponent } from './pinboard.component';
+import {HttpClient, HttpHandler} from "@angular/common/http";
+import {Router} from "@angular/router";
+import {AuthService} from "../providers/auth.service";
+import {FilterService} from "../providers/filter.service";
+import {ResizeService} from "../size-detector/resize.service";
+import {PinboardService} from "./pinboard.service";
 
 describe('PinboardComponent', () => {
   let component: PinboardComponent;
@@ -8,7 +14,8 @@ describe('PinboardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PinboardComponent ]
+      declarations: [ PinboardComponent ],
+      providers: [AuthService, FilterService, ResizeService, PinboardService, HttpClient, HttpHandler]
     })
     .compileComponents();
   }));

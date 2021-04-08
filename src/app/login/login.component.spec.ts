@@ -1,14 +1,33 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
+import {HttpClient, HttpHandler} from "@angular/common/http";
+import {Router} from "@angular/router";
+import {AuthService} from "../providers/auth.service";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {MatInputModule} from "@angular/material/input";
+import {MatIconModule} from "@angular/material/icon";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
+  let routerMock = {navigate: jasmine.createSpy('navigate')}
+
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [ LoginComponent ],
+      providers: [{provide: Router, useValue: routerMock}, AuthService],
+      imports: [
+        BrowserAnimationsModule,
+        HttpClientTestingModule,
+        FormsModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatIconModule,
+      ]
     })
     .compileComponents();
   }));
