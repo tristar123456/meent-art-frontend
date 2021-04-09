@@ -8,6 +8,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   --ci-color: #00e9f8;
   --ci-bg-color: #0b2374;
 }
+body{
+  -webkit-font-smoothing: antialiased;
+}
 
 .image-dialog{
   mat-dialog-container{

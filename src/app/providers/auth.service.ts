@@ -48,8 +48,8 @@ export class AuthService {
     ).toPromise();
   }
 
-  public logout(): void {
-    this.httpClient.post(
+  public async logout(): Promise<void> {
+    await this.httpClient.post(
       this.configProvider.getApiUrl() + '/user/logout',
       {}
       , {
