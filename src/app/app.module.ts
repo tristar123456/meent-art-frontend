@@ -7,7 +7,7 @@ import {ContentItemComponent} from './content-item/content-item.component';
 import {PinboardComponent} from './pinboard/pinboard.component';
 import {HeaderComponent} from './header/header.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatInputModule} from '@angular/ material/input';
+import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import {HostConfigProvider} from './providers/host-config.provider';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
