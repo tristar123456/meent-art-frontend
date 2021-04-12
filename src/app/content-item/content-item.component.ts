@@ -18,6 +18,7 @@ export class ContentItemComponent implements OnInit {
   @Input() item: Item;
   @Output() newItems = new EventEmitter<void>();
   public size: number;
+  loadingFinished = false;
 
   constructor(
     private dialog: MatDialog,
@@ -31,11 +32,14 @@ export class ContentItemComponent implements OnInit {
     this.size = this.resizeService.current;
     this.resizeService.onResize$.subscribe((size) => {
       this.size = size;
-    })
+    });
+    setTimeout( () => {
+      this.loadingFinished = true;
+    }, 500);
   }
 
   openDeleteDialog(item: Item): void {
-    let dialogRef = this.dialog.open(DialogComponent, {
+    const dialogRef = this.dialog.open(DialogComponent, {
       width: '350px',
       data: item
     });
@@ -58,10 +62,10 @@ export class ContentItemComponent implements OnInit {
   openImageDialog(imgLink: string) {
     console.log(this.size);
     if (this.size > 0) {
-      let imageDialogRef = this.dialog.open(ImageDialogComponent, {
+      const imageDialogRef = this.dialog.open(ImageDialogComponent, {
         width: '100%',
         panelClass: 'image-dialog',
-        data: {imgLink: imgLink}
+        data: {imgLink}
       });
     }
   }

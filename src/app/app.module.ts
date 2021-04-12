@@ -28,6 +28,7 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import {ResizeService} from './size-detector/resize.service';
+import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -68,6 +69,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
     HttpClientModule,
     MatButtonModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     ReactiveFormsModule,
     FormsModule,
     MatDialogModule

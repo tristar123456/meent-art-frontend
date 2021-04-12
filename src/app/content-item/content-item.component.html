@@ -1,4 +1,4 @@
-<div class="card" [id]="item.id">
+<div class="card opacity-0" [id]="item.id" [class.opacity-100]="loadingFinished">
   <div class="card-header">
     <h5 class="card-title" *ngIf="!!item.title">
       {{item.title}}
