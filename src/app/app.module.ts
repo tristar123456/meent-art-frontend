@@ -19,7 +19,7 @@ import {FilterItemPipe} from './pinboard/filter-item.pipe';
 import {FileUploadComponent} from './file-upload/file-upload.component';
 import {MatCardModule} from '@angular/material/card';
 import {DialogComponent} from './dialog/dialog.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import {EditItemComponent} from './edit-item/edit-item.component';
 import {AuthInterceptor} from './providers/auth-interceptor.service';
 import {SizeDetectorComponent} from './size-detector/size-detector.component';
@@ -32,7 +32,7 @@ import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-s
 import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -95,7 +95,9 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
     },
     ResizeService,
     HttpClient,
-    NgxImageCompressService
+    NgxImageCompressService,
+  ],
+  exports:[
   ],
   bootstrap: [AppComponent]
 })
