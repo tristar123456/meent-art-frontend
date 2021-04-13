@@ -1,4 +1,8 @@
 import {Component, Input, Output} from '@angular/core';
+import {ContactDialogComponent} from './contact-dialog/contact-dialog.component';
+import {MatDialog} from '@angular/material/dialog';
+import {FormBuilder} from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,36 @@ import {Component, Input, Output} from '@angular/core';
 })
 export class AppComponent {
   title = 'Meent.art';
+  public contactDialogOpened = false;
+
+  constructor(
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar
+  ) {
+  }
+
+  openContactDialog() {
+    if (!this.contactDialogOpened) {
+      const contactDialog = this.dialog.open(ContactDialogComponent, {
+        width: '98%',
+        height: 'auto'
+      });
+      this.contactDialogOpened = true;
+
+      contactDialog.afterClosed().subscribe((submitConfirmed: boolean) => {
+        if (submitConfirmed) {
+          this.snackBar.open('Contact Request sent!', 'Nice!', {
+            panelClass: 'snackbar-custom',
+            duration: 1400,
+            verticalPosition: 'bottom',
+          });
+          setTimeout(() => {
+            this.contactDialogOpened = false;
+          }, 1600);
+        } else {
+          this.contactDialogOpened = false;
+        }
+      });
+    }
+  }
 }

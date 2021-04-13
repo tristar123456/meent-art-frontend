@@ -29,6 +29,10 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import {ResizeService} from './size-detector/resize.service';
 import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
+import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -48,7 +52,8 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
     FileUploadComponent,
     DialogComponent,
     EditItemComponent,
-    ImageDialogComponent
+    ImageDialogComponent,
+    ContactDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
       appId: '1:57509747354:web:587de7d5c0adb124bb9d23'
     }),
     AngularFireStorageModule,
+    AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
@@ -70,9 +76,11 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
     MatButtonModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatSnackBarModule,
     ReactiveFormsModule,
     FormsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [
     {

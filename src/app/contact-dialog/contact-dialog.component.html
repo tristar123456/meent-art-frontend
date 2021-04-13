@@ -1,0 +1,35 @@
+<h1 mat-dialog-title>Contact Us</h1>
+<mat-dialog-content>
+  <p>
+    We are very happy that you want to contact us! Please fill in you contact information and we will write an answer ASAP!
+  </p>
+  <div class="container">
+    <div class="col-12">
+      <form [formGroup]="FormData" (submit)="onSubmit(FormData.value)" id="contactForm">
+        <div class="row">
+          <mat-form-field>
+            <mat-label>E-Mail</mat-label>
+            <input matInput type="email" formControlName="email" required>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Full Name</mat-label>
+            <input matInput type="email" formControlName="fullname" required>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field>
+            <mat-label>Message</mat-label>
+            <textarea matInput formControlName="message" required></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions class="justify-content-between flex-row-reverse">
+  <button mat-raised-button color="primary" type="submit" form="contactForm" [disabled]="!FormData.valid" mat-dialog-close autofocus>Submit</button>
+
+  <button mat-raised-button type="button" form="contactForm" mat-dialog-close="">Cancel</button>
+</mat-dialog-actions>

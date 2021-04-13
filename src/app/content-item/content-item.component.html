@@ -9,7 +9,7 @@
   <div class="card-body">
     <p class="card-text" *ngIf="!!item.text">{{item.text}}</p>
     <div class="container" *ngIf="loggedIn()">
-      <div class="row justify-content-end">
+      <div class="row justify-content-start">
         <a class="card-link" [routerLink]="['edit',item.id]">
           <mat-icon>edit</mat-icon>
         </a>

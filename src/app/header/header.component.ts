@@ -3,6 +3,8 @@ import {AuthService} from "../providers/auth.service";
 import {FormControl} from "@angular/forms";
 import {FilterService} from "../providers/filter.service";
 import {Router} from "@angular/router";
+import {MatDialog} from '@angular/material/dialog';
+import {ContactDialogComponent} from '../contact-dialog/contact-dialog.component';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

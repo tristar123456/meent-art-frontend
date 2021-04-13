@@ -8,3 +8,23 @@ main{
   background-image: url("../assets/images/bg-img-3.jpeg");
   background-attachment: fixed;
 }
+
+footer{
+  .fixed-bottom{
+    padding-bottom: 10px;
+  }
+  .btn-contact{
+    z-index: 999;
+    margin: auto;
+    min-width: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    line-height: 100%;
+
+    font-size: 24px;
+  }
+}
+.snackbar-custom{
+  z-index: 0;
+}
