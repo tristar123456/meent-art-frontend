@@ -67,7 +67,6 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
       appId: '1:57509747354:web:587de7d5c0adb124bb9d23'
     }),
     AngularFireStorageModule,
-    AngularFirestoreModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
