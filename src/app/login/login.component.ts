@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
-import {AuthService} from "../providers/auth.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {FormControl, Validators} from '@angular/forms';
+import {AuthService} from '../providers/auth.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -25,9 +25,9 @@ export class LoginComponent implements OnInit {
     this.authService.authenticate(
       this.username.value,
       this.password.value
-    ).then(()=>{
-      this.router.navigate([''])
-    }, error =>{
+    ).then(() => {
+      this.router.navigate(['']);
+    }, error => {
       this.warn();
     });
   }

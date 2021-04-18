@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  AppName: 'Me3nt'
+  AppName: 'Me3nt',
+  apiUrl: 'http://127.0.0.1:8000'
 };
 
 /*

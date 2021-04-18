@@ -33,6 +33,7 @@ import { ContactDialogComponent } from './contact-dialog/contact-dialog.componen
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import {AngularFireAuthModule} from '@angular/fire/auth';
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {
@@ -67,6 +68,7 @@ export function configFactory(hostConfigProvider: HostConfigProvider) {
       appId: '1:57509747354:web:587de7d5c0adb124bb9d23'
     }),
     AngularFireStorageModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,

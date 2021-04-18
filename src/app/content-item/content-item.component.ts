@@ -4,10 +4,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {DialogComponent} from "../dialog/dialog.component";
 import {BackendService} from "../providers/backend.service";
 import {AuthService} from "../providers/auth.service";
-import {error} from "@angular/compiler/src/util";
 import {ImageDialogComponent} from "../image-dialog/image-dialog.component";
 import {ResizeService} from "../size-detector/resize.service";
-import {SCREEN_SIZE} from "../size-detector/screen-size.enum";
 
 @Component({
   selector: 'app-content-item',
@@ -60,10 +58,9 @@ export class ContentItemComponent implements OnInit {
   }
 
   openImageDialog(imgLink: string) {
-    console.log(this.size);
     if (this.size > 0) {
       const imageDialogRef = this.dialog.open(ImageDialogComponent, {
-        width: '100%',
+        width: 'auto',
         panelClass: 'image-dialog',
         data: {imgLink}
       });

@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({providedIn: 'root'})
 export class HostConfigProvider {
@@ -16,8 +17,9 @@ export class HostConfigProvider {
   }
 
   async loadConfig(): Promise<void> {
-    const jsonFile = '/assets/config.json';
-    this.config = await this.httpClient.get<HostConfig>(jsonFile).toPromise();
+    // const jsonFile = '/assets/config.json';
+    // this.config = await this.httpClient.get<HostConfig>(jsonFile).toPromise();
+    this.config.apiUrl = environment.apiUrl;
   }
 }
 
