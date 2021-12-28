@@ -3,7 +3,6 @@ import {HostConfigProvider} from './host-config.provider';
 import {HttpClient} from '@angular/common/http';
 import {User} from './user';
 import {Router} from '@angular/router';
-import firebase from 'firebase/app';
 import 'firebase/auth';
 
 

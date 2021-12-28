@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog',
@@ -15,7 +15,7 @@ export class DialogComponent implements OnInit {
 
   onCloseConfirm() {
     setTimeout(() => {
-      this.dialogRef.close((dialogResult)=>{
+      this.dialogRef.close((dialogResult) => {
         return !!dialogResult;
 
       });

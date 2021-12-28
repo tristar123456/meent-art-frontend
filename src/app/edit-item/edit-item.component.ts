@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {BackendService} from "../providers/backend.service";
-import {Item} from "../content-item/item";
-import {ActivatedRoute, Router} from "@angular/router";
-import {AuthService} from "../providers/auth.service";
+import {FormControl} from '@angular/forms';
+import {BackendService} from '../providers/backend.service';
+import {Item} from '../content-item/item';
+import {ActivatedRoute, Router} from '@angular/router';
+import {AuthService} from '../providers/auth.service';
 
 @Component({
   selector: 'app-edit-item',
@@ -22,12 +22,12 @@ export class EditItemComponent implements OnInit {
     private backendService: BackendService,
     private authService: AuthService,
     private router: Router,
-    private activatedroute:ActivatedRoute
+    private activatedroute: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
-    this.id = this.activatedroute.snapshot.paramMap.get("id");
-    this.backendService.getPostById(this.id).subscribe((receivedItem) =>{
+    this.id = this.activatedroute.snapshot.paramMap.get('id');
+    this.backendService.getPostById(this.id).subscribe((receivedItem) => {
       this.item = receivedItem;
       if (!!this.item.title){
         this.title.setValue(this.item.title);
@@ -44,7 +44,7 @@ export class EditItemComponent implements OnInit {
 
   editPost(){
     const item = {} as Item;
-    item.id='';
+    item.id = '';
     item.title = this.title.value;
     item.text = this.text.value;
     if (this.fileAsString === null){
@@ -52,10 +52,10 @@ export class EditItemComponent implements OnInit {
     }else{
       item.imgLink = this.fileAsString;
     }
-    this.backendService.editPost(this.id, item).then(()=>{
+    this.backendService.editPost(this.id, item).then(() => {
         this.router.navigate(['']);
       },
-        error=>{
+        error => {
       this.authService.logout();
     });
   }

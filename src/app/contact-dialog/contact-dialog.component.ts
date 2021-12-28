@@ -2,8 +2,6 @@ import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {Contact} from './contact';
-import firebase from 'firebase';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact-dialog',

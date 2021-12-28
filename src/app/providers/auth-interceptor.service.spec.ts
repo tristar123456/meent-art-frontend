@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
 import { AuthInterceptor } from './auth-interceptor.service';
-import {Router} from "@angular/router";
-import {AuthService} from "./auth.service";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {Router} from '@angular/router';
+import {AuthService} from './auth.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('AuthInterceptorService', () => {
   let service: AuthInterceptor;
-  let routerMock = {navigate: jasmine.createSpy('navigate')}
+  const routerMock = {navigate: jasmine.createSpy('navigate')};
 
   beforeEach(() => {
     TestBed.configureTestingModule({

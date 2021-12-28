@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, HostListener} from '@angular/core';
-import {SCREEN_SIZE} from "./screen-size.enum";
-import {ResizeService} from "./resize.service";
+import {SCREEN_SIZE} from './screen-size.enum';
+import {ResizeService} from './resize.service';
 
 @Component({
   selector: 'app-size-detector',
@@ -29,7 +29,7 @@ export class SizeDetectorComponent implements AfterViewInit {
 
   constructor(private elementRef: ElementRef, private resizeSvc: ResizeService) { }
 
-  @HostListener("window:resize", [])
+  @HostListener('window:resize', [])
   private onResize() {
     this.detectScreenSize();
   }

@@ -1,14 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
 import { BackendService } from './backend.service';
-import {HttpClient, HttpHandler} from "@angular/common/http";
-import {AuthService} from "./auth.service";
-import {Router} from "@angular/router";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {AuthService} from './auth.service';
+import {Router} from '@angular/router';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('BackendService', () => {
   let service: BackendService;
-  let routerMock = {navigate: jasmine.createSpy('navigate')}
+  const routerMock = {navigate: jasmine.createSpy('navigate')};
 
   beforeEach(() => {
     TestBed.configureTestingModule({

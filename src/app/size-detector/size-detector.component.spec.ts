@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SizeDetectorComponent } from './size-detector.component';
-import {ElementRef} from "@angular/core";
-import {ResizeService} from "./resize.service";
+import {ResizeService} from './resize.service';
 
 describe('SizeDetectorComponent', () => {
   let component: SizeDetectorComponent;

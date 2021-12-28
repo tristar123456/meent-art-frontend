@@ -1,8 +1,8 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
-import {Item} from "../content-item/item";
-import {Observable} from "rxjs";
-import {HttpClient} from "@angular/common/http";
-import {HostConfigProvider} from "./host-config.provider";
+import {Item} from '../content-item/item';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {HostConfigProvider} from './host-config.provider';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,7 @@ export class BackendService {
       itemList.next(received);
     }, error => {
       console.log(error);
-    })
+    });
   });
 
   constructor(
@@ -75,7 +75,7 @@ export class BackendService {
         item.next(received);
       }, error => {
         console.log(error);
-      })
+      });
     });
   }
 }

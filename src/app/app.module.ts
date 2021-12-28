@@ -19,21 +19,20 @@ import {FilterItemPipe} from './pinboard/filter-item.pipe';
 import {FileUploadComponent} from './file-upload/file-upload.component';
 import {MatCardModule} from '@angular/material/card';
 import {DialogComponent} from './dialog/dialog.component';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
 import {EditItemComponent} from './edit-item/edit-item.component';
 import {AuthInterceptor} from './providers/auth-interceptor.service';
 import {SizeDetectorComponent} from './size-detector/size-detector.component';
 import {NgxImageCompressService} from 'ngx-image-compress';
-import {AngularFireModule} from '@angular/fire';
-import {AngularFireStorageModule} from '@angular/fire/storage';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 import { ImageDialogComponent } from './image-dialog/image-dialog.component';
 import {ResizeService} from './size-detector/resize.service';
-import {MatProgressSpinnerModule, MatSpinner} from '@angular/material/progress-spinner';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ContactDialogComponent } from './contact-dialog/contact-dialog.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
-import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
-import {AngularFireAuthModule} from '@angular/fire/auth';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 
 
 export function configFactory(hostConfigProvider: HostConfigProvider) {

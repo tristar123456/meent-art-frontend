@@ -6,7 +6,7 @@ import {
   HttpEvent
 } from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {AuthService} from "./auth.service";
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -44,21 +44,21 @@ export class AuthInterceptor implements HttpInterceptor {
     request = request.clone({
       setHeaders: {
         'Content-Type': 'application/json; charset=utf-8',
-        'Accept': 'application/json',
+        Accept: 'application/json',
       }
     });
     // Set headers for requests that require CSRF.
-    if (csrftoken != '') {
+    if (csrftoken !== '') {
       request = request.clone({
         headers: request.headers.set(
           'X-CSRFTOKEN',
           csrftoken,
         )
-      })
+      });
     }
     // Set headers for requests that require authorization.
-    if (accessToken != '') {
-      let authenticatedRequest = request.clone({
+    if (accessToken !== '') {
+      const authenticatedRequest = request.clone({
         headers: request.headers.set(
           'Authorization',
           'Bearer ' + accessToken,

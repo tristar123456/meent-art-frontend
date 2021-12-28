@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {BackendService} from "../providers/backend.service";
-import {Item} from "../content-item/item";
-import {Router} from "@angular/router";
-import {error} from "@angular/compiler/src/util";
-import {AuthService} from "../providers/auth.service";
+import {FormControl} from '@angular/forms';
+import {BackendService} from '../providers/backend.service';
+import {Item} from '../content-item/item';
+import {Router} from '@angular/router';
+import {AuthService} from '../providers/auth.service';
 
 @Component({
   selector: 'app-create-content-item',
@@ -32,7 +31,7 @@ export class CreateContentItemComponent implements OnInit {
 
   createNewPost(){
     const item = {} as Item;
-    item.id='';
+    item.id = '';
     item.title = this.title.value;
     item.text = this.text.value;
     if (this.fileAsString === null){
@@ -40,7 +39,7 @@ export class CreateContentItemComponent implements OnInit {
     }else{
       item.imgLink = this.fileAsString;
     }
-    this.backendService.addPost(item).then(()=>{
+    this.backendService.addPost(item).then(() => {
       this.router.navigate(['']);
     }, error => {
       this.authService.logout();

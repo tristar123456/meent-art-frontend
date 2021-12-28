@@ -1,10 +1,8 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {AuthService} from "../providers/auth.service";
-import {FormControl} from "@angular/forms";
-import {FilterService} from "../providers/filter.service";
-import {Router} from "@angular/router";
-import {MatDialog} from '@angular/material/dialog';
-import {ContactDialogComponent} from '../contact-dialog/contact-dialog.component';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../providers/auth.service';
+import {FilterService} from '../providers/filter.service';
+import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -26,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
   performLogout(): void {
     this.authService.logout();
-    this.router.navigate(['login'])
+    this.router.navigate(['login']);
   }
 
   checkLogin(): boolean{

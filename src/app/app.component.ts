@@ -1,7 +1,6 @@
-import {Component, Input, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {ContactDialogComponent} from './contact-dialog/contact-dialog.component';
 import {MatDialog} from '@angular/material/dialog';
-import {FormBuilder} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({

@@ -1,8 +1,7 @@
-import {AfterContentInit, AfterViewInit, Component, ElementRef, EventEmitter, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Item} from '../content-item/item';
 import {PinboardService} from './pinboard.service';
 import {FilterService} from '../providers/filter.service';
-import {retry} from 'rxjs/operators';
 import {ResizeService} from '../size-detector/resize.service';
 import {SCREEN_SIZE} from '../size-detector/screen-size.enum';
 

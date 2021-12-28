@@ -1,11 +1,11 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Item} from "./item";
-import {MatDialog} from "@angular/material/dialog";
-import {DialogComponent} from "../dialog/dialog.component";
-import {BackendService} from "../providers/backend.service";
-import {AuthService} from "../providers/auth.service";
-import {ImageDialogComponent} from "../image-dialog/image-dialog.component";
-import {ResizeService} from "../size-detector/resize.service";
+import {Item} from './item';
+import {MatDialog} from '@angular/material/dialog';
+import {DialogComponent} from '../dialog/dialog.component';
+import {BackendService} from '../providers/backend.service';
+import {AuthService} from '../providers/auth.service';
+import {ImageDialogComponent} from '../image-dialog/image-dialog.component';
+import {ResizeService} from '../size-detector/resize.service';
 
 @Component({
   selector: 'app-content-item',

@@ -1,10 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {NgxImageCompressService} from "ngx-image-compress";
-import {AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask} from "@angular/fire/storage";
-import {Observable} from "rxjs";
-import {strict} from "assert";
+import {NgxImageCompressService} from 'ngx-image-compress';
+import {AngularFireStorage, AngularFireStorageReference, AngularFireUploadTask} from '@angular/fire/compat/storage';
+import {Observable} from 'rxjs';
 
-const ALLOWED_TYPE = 'image'
+const ALLOWED_TYPE = 'image';
 
 @Component({
   selector: 'app-file-upload',
@@ -12,12 +11,12 @@ const ALLOWED_TYPE = 'image'
   styleUrls: ['./file-upload.component.scss']
 })
 export class FileUploadComponent implements OnInit {
-  @Input() text = "Select an Image";
+  @Input() text = 'Select an Image';
   filename: string;
 
   // @Output() onFileUploaded = new EventEmitter<string | ArrayBuffer>();
   @Output() onFileUploaded = new EventEmitter<string>();
-  @Output() onFileReading = new EventEmitter<boolean>()
+  @Output() onFileReading = new EventEmitter<boolean>();
   fileName = '';
 
   ref: AngularFireStorageReference;
@@ -37,11 +36,11 @@ export class FileUploadComponent implements OnInit {
     this.onFileReading.emit(true);
     const id = Math.random().toString(36).substring(2);
     this.ref = this.afStorage.ref(id);
-    const file:File = event.target.files[0];
+    const file: File = event.target.files[0];
     this.task = this.ref.put(file);
     this.uploadProgress = this.task.percentageChanges();
-    this.task.then((a)=>{
-      a.ref.getDownloadURL().then((link: string) =>{
+    this.task.then((a) => {
+      a.ref.getDownloadURL().then((link: string) => {
         this.onFileUploaded.emit(link);
         this.onFileReading.emit(false);
       });
@@ -53,10 +52,10 @@ export class FileUploadComponent implements OnInit {
     // }
   }
 
-  //TODO: DOES NOT WORK PROPERLY
+  // TODO: DOES NOT WORK PROPERLY
   getBase64(file): boolean {
-    let reader = new FileReader();
-    let fileAsString:string|ArrayBuffer;
+    const reader = new FileReader();
+    let fileAsString: string|ArrayBuffer;
     this.onFileReading.emit(true);
     // reader.readAsArrayBuffer(file);
     reader.readAsDataURL(file);

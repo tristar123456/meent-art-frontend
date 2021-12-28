@@ -1,14 +1,12 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PinboardComponent } from './pinboard.component';
-import {HttpClient, HttpHandler} from "@angular/common/http";
-import {Router} from "@angular/router";
-import {AuthService} from "../providers/auth.service";
-import {FilterService} from "../providers/filter.service";
-import {ResizeService} from "../size-detector/resize.service";
-import {PinboardService} from "./pinboard.service";
-import {HttpClientTestingModule} from "@angular/common/http/testing";
-import {FilterItemPipe} from "./filter-item.pipe";
+import {AuthService} from '../providers/auth.service';
+import {FilterService} from '../providers/filter.service';
+import {ResizeService} from '../size-detector/resize.service';
+import {PinboardService} from './pinboard.service';
+import {HttpClientTestingModule} from '@angular/common/http/testing';
+import {FilterItemPipe} from './filter-item.pipe';
 
 describe('PinboardComponent', () => {
   let component: PinboardComponent;

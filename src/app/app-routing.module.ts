@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {PinboardComponent} from "./pinboard/pinboard.component";
-import {LoginComponent} from "./login/login.component";
-import {AuthGuard} from "./providers/auth.guard";
-import {CreateContentItemComponent} from "./create-content-item/create-content-item.component";
-import {EditItemComponent} from "./edit-item/edit-item.component";
+import {PinboardComponent} from './pinboard/pinboard.component';
+import {LoginComponent} from './login/login.component';
+import {AuthGuard} from './providers/auth.guard';
+import {CreateContentItemComponent} from './create-content-item/create-content-item.component';
+import {EditItemComponent} from './edit-item/edit-item.component';
 
 
 const routes: Routes = [

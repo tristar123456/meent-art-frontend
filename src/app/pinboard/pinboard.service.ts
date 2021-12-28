@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
-import {Observable} from "rxjs";
-import {Item} from "../content-item/item";
-import {BackendService} from "../providers/backend.service";
+import {Observable} from 'rxjs';
+import {Item} from '../content-item/item';
+import {BackendService} from '../providers/backend.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class PinboardService {
     return this.backendService.getAllPosts();
   }
 
-  getContentItem(id :string) {
+  getContentItem(id: string) {
     return this.backendService.getPostById(id);
   }
 }
