@@ -9,7 +9,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Meent.art';
+  title: string  = 'Meent.art';
   public contactDialogOpened = false;
 
   constructor(

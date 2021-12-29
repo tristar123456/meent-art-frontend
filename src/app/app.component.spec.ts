@@ -1,14 +1,11 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {MatDialog, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { of } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 describe('AppComponent', () => {
-  let dialogSpy: jasmine.Spy;
-  const dialogRefSpyObj = jasmine.createSpyObj({ afterClosed : of({}), close: null });
-  dialogRefSpyObj.componentInstance = { body: '' };
-
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -18,12 +15,12 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
       ],
+      providers: [
+        {provide: MatDialogRef, useValue: {}},
+        {provide: MatSnackBar, useValue: {}}
+      ]
     }).compileComponents();
   }));
-
-  beforeEach(() => {
-    dialogSpy = spyOn(TestBed.get(MatDialog), 'open').and.returnValue(dialogRefSpyObj);
-  });
 
 
   it('should create the app', () => {
