@@ -2,6 +2,7 @@ import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { of } from 'rxjs';
 
 describe('AppComponent', () => {
   let dialogSpy: jasmine.Spy;
